@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ve.lawyer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lawyer">
-        <activity android:name=".activity.DashboardActivity"></activity>
+        <activity android:name=".activity.ProfileActivity"></activity>
+        <activity android:name=".activity.HelpActivity" />
+        <activity android:name=".activity.TermsActivity" />
+        <activity android:name=".activity.ChangePasswordActivity" />
+        <activity android:name=".activity.InviteUserActivity" />
+        <activity android:name=".activity.MyContactList" />
+        <activity
+            android:name=".activity.MyPostActivity"
+            android:label="@string/title_activity_my_post"
+            android:theme="@style/Theme.Lawyer.NoActionBar" />
+        <activity android:name=".activity.CreateNewPostActivity" />
+        <activity android:name=".activity.DashboardActivity" />
         <activity android:name=".activity.ForgotPsswordActivity" />
         <activity android:name=".activity.SignupActivity" />
         <activity android:name=".activity.LoginActivity" />

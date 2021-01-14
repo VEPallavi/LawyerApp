@@ -6,6 +6,7 @@ import androidx.core.view.GravityCompat;
 import androidx.core.widget.ImageViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private View headerView;
     private TextView title;
+    private View click_profile;
 
 
     private LinearLayout ll_dashBoard, ll_category, ll_change_password, ll_help, ll_term, ll_logout;
@@ -66,6 +68,23 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        selectDashBoardMenu();
+
+    }
+
+    @Override
+    protected void onPause() {
+
+        navDrawer.closeDrawers();
+
+        super.onPause();
+
+    }
+
     @Override
     public void onBackPressed() {
         if (getFragmentManager().getBackStackEntryCount() == 1) {
@@ -74,6 +93,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     void handleNavigation() {
+        click_profile = headerView.findViewById(R.id.click_profile);
         ll_dashBoard = headerView.findViewById(R.id.ll_dashBoard);
         ll_category = headerView.findViewById(R.id.ll_category);
         ll_change_password = headerView.findViewById(R.id.ll_change_password);
@@ -98,21 +118,13 @@ public class DashboardActivity extends AppCompatActivity {
         logout = headerView.findViewById(R.id.logout);
 
         ll_dashBoard.setOnClickListener((v) -> {
-            ll_dashBoard.setBackgroundColor(getResources().getColor(R.color.blue_alpha));
-            ll_category.setBackgroundColor(getResources().getColor(R.color.white));
-            ll_change_password.setBackgroundColor(getResources().getColor(R.color.white));
-            ll_help.setBackgroundColor(getResources().getColor(R.color.white));
-            ll_term.setBackgroundColor(getResources().getColor(R.color.white));
-            ll_logout.setBackgroundColor(getResources().getColor(R.color.white));
-
-            dashboard.setTextColor(getResources().getColor(R.color.blue_fb));
-            category.setTextColor(getResources().getColor(R.color.default_text_color));
-            change_pass.setTextColor(getResources().getColor(R.color.default_text_color));
-            help.setTextColor(getResources().getColor(R.color.default_text_color));
-            term.setTextColor(getResources().getColor(R.color.default_text_color));
-            logout.setTextColor(getResources().getColor(R.color.default_text_color));
+            selectDashBoardMenu();
 
 
+        });
+
+        click_profile.setOnClickListener((v) -> {
+            startActivity(new Intent(this, ProfileActivity.class));
         });
         ll_category.setOnClickListener((v) -> {
             ll_category.setBackgroundColor(getResources().getColor(R.color.blue_alpha));
@@ -146,6 +158,8 @@ public class DashboardActivity extends AppCompatActivity {
             term.setTextColor(getResources().getColor(R.color.default_text_color));
             logout.setTextColor(getResources().getColor(R.color.default_text_color));
 
+            startActivity(new Intent(this, ChangePasswordActivity.class));
+
 
         });
         ll_help.setOnClickListener((v) -> {
@@ -162,6 +176,7 @@ public class DashboardActivity extends AppCompatActivity {
             help.setTextColor(getResources().getColor(R.color.blue_fb));
             term.setTextColor(getResources().getColor(R.color.default_text_color));
             logout.setTextColor(getResources().getColor(R.color.default_text_color));
+            startActivity(new Intent(this, HelpActivity.class));
 
         });
         ll_term.setOnClickListener((v) -> {
@@ -179,6 +194,7 @@ public class DashboardActivity extends AppCompatActivity {
             help.setTextColor(getResources().getColor(R.color.default_text_color));
             term.setTextColor(getResources().getColor(R.color.blue_fb));
             logout.setTextColor(getResources().getColor(R.color.default_text_color));
+            startActivity(new Intent(this, TermsActivity.class));
 
         });
         ll_logout.setOnClickListener((v) -> {
@@ -195,9 +211,27 @@ public class DashboardActivity extends AppCompatActivity {
             help.setTextColor(getResources().getColor(R.color.default_text_color));
             term.setTextColor(getResources().getColor(R.color.default_text_color));
             logout.setTextColor(getResources().getColor(R.color.blue_fb));
+            startActivity(new Intent(this, LoginActivity.class));
+            finishAffinity();
 
         });
 
+    }
+
+    void selectDashBoardMenu() {
+        ll_dashBoard.setBackgroundColor(getResources().getColor(R.color.blue_alpha));
+        ll_category.setBackgroundColor(getResources().getColor(R.color.white));
+        ll_change_password.setBackgroundColor(getResources().getColor(R.color.white));
+        ll_help.setBackgroundColor(getResources().getColor(R.color.white));
+        ll_term.setBackgroundColor(getResources().getColor(R.color.white));
+        ll_logout.setBackgroundColor(getResources().getColor(R.color.white));
+
+        dashboard.setTextColor(getResources().getColor(R.color.blue_fb));
+        category.setTextColor(getResources().getColor(R.color.default_text_color));
+        change_pass.setTextColor(getResources().getColor(R.color.default_text_color));
+        help.setTextColor(getResources().getColor(R.color.default_text_color));
+        term.setTextColor(getResources().getColor(R.color.default_text_color));
+        logout.setTextColor(getResources().getColor(R.color.default_text_color));
     }
 
     void handleBottomNavigation() {

@@ -8,4 +8,12 @@
         <item>Category</item>
     </array>
 
+    <array name="data2">
+
+        <item>Public</item>
+    </array>
+    <string name="title_activity_my_post">MyPostActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
 </resources>
