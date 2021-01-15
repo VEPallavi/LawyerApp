@@ -141,7 +141,7 @@ public class DashboardActivity extends AppCompatActivity {
             term.setTextColor(getResources().getColor(R.color.default_text_color));
             logout.setTextColor(getResources().getColor(R.color.default_text_color));
 
-
+            startActivity(new Intent(this, CategoryActivity.class));
         });
         ll_change_password.setOnClickListener((v) -> {
             ll_change_password.setBackgroundColor(getResources().getColor(R.color.blue_alpha));

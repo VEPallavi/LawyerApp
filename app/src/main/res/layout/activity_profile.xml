@@ -33,6 +33,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/ll_profile_pic"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_100sdp"
         android:layout_marginTop="@dimen/_10sdp"
@@ -40,11 +41,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_pic"
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_90sdp"
-            android:src="@drawable/image_one" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_one"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <ImageView
             android:id="@+id/camera"
@@ -57,7 +62,142 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_profile_pic">
 
 
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/user_on_icon"
+            android:padding="@dimen/_2sdp" />
+
+        <com.ve.lawyer.font.TextViewRegular
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/img_edit"
+            android:layout_toRightOf="@+id/img_user"
+            android:text="Name"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.ve.lawyer.font.EdiTextRegular
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/img_edit"
+            android:layout_toRightOf="@+id/img_user"
+            android:background="@null"
+            android:hint="Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/edit_icon"
+            android:padding="@dimen/_2sdp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="@+id/rl_name"
+        app:layout_constraintRight_toRightOf="@+id/rl_name"
+        app:layout_constraintTop_toBottomOf="@+id/rl_name" />
+
+    <RelativeLayout
+        android:id="@+id/rl_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+
+        <ImageView
+            android:id="@+id/img_email"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/email_on_icon"
+            android:padding="@dimen/_2sdp" />
+
+        <com.ve.lawyer.font.TextViewRegular
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/img_edit_email"
+            android:layout_toRightOf="@+id/img_email"
+            android:text="Email-Id"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.ve.lawyer.font.EdiTextRegular
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_email"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/img_edit_email"
+            android:layout_toRightOf="@+id/img_email"
+            android:background="@null"
+            android:hint="Email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/img_edit_email"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/edit_icon"
+            android:padding="@dimen/_2sdp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="@+id/rl_email"
+        app:layout_constraintRight_toRightOf="@+id/rl_email"
+        app:layout_constraintTop_toBottomOf="@+id/rl_email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
