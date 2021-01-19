@@ -12,7 +12,7 @@ import com.ve.lawyer.R;
 
 public class CreateNewPostActivity extends AppCompatActivity {
 
-    private EditText edit_query;
+        private EditText edit_query;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

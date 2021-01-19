@@ -4,30 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ve.lawyer.R;
 
-public class CategoryActivity extends AppCompatActivity {
+public class PostDetailActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
-        setClick();
+        setContentView(R.layout.activity_post_detail);
+        clicks();
     }
 
+    void clicks() {
 
-    void setClick() {
         findViewById(R.id.back).setOnClickListener((v) -> {
             finish();
 
+
         });
-
-        findViewById(R.id.rl_category).setOnClickListener((v) -> {
-
-            startActivity(new Intent(CategoryActivity.this, MyPostActivity.class));
-        });
-
-
+       
     }
 }

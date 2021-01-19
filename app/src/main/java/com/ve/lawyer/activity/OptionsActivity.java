@@ -23,14 +23,16 @@ public class OptionsActivity extends AppCompatActivity {
 
         findViewById(R.id.signin).setOnClickListener((v) -> {
             startActivity(new Intent(OptionsActivity.this, LoginActivity.class));
+            finish();
 
         });
         findViewById(R.id.signup).setOnClickListener((v) -> {
-
             startActivity(new Intent(OptionsActivity.this, SignupActivity.class));
+            finish();
         });
 
         findViewById(R.id.legal_que).setOnClickListener((v) -> {
+            startActivity(new Intent(OptionsActivity.this, DashboardActivity.class));
             finish();
         });
 
