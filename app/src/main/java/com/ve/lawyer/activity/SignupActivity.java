@@ -104,7 +104,7 @@ public class SignupActivity extends AppCompatActivity {
                                 if (!TextUtils.isEmpty(cnf_et_pass.getText().toString().trim())) {
 
                                     if (et_pass.getText().toString().trim().equals(cnf_et_pass.getText().toString().trim())) {
-                                        startActivity(new Intent(SignupActivity.this, DashboardActivity.class));
+                                        startActivity(new Intent(SignupActivity.this, EnterOtpActivity.class));
                                         finishAffinity();
 
                                     } else {
