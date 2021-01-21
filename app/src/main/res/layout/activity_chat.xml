@@ -148,11 +148,10 @@
                 android:layout_marginRight="@dimen/_5sdp"
                 android:layout_toLeftOf="@+id/iv_smily"
                 android:background="@null"
-                android:hint="Write a message"
+                android:hint="Type a message"
                 android:inputType="textMultiLine|textCapSentences"
                 android:maxLines="4"
                 android:padding="@dimen/_10sdp"
-                android:text="Hi How Are you"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp" />
 
