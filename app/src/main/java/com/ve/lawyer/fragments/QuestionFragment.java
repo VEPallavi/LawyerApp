@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.ve.lawyer.R;
+import com.ve.lawyer.activity.ChatActivity;
 import com.ve.lawyer.activity.CreateNewPostActivity;
 
 
@@ -25,6 +26,8 @@ public class QuestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         main = inflater.inflate(R.layout.fragment_question, container, false);
         attachment = main.findViewById(R.id.attachment);
+
+
         setCLicks();
         return main;
 
@@ -36,5 +39,9 @@ public class QuestionFragment extends Fragment {
             startActivity(new Intent(getActivity(), CreateNewPostActivity.class));
         });
 
+        main.findViewById(R.id.cl_chat).setOnClickListener((v) -> {
+
+            startActivity(new Intent(getActivity(), ChatActivity.class));
+        });
     }
 }
