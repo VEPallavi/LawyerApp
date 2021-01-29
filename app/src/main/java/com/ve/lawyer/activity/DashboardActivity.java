@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.ve.lawyer.R;
+import com.ve.lawyer.fragments.ChatListFragment;
 import com.ve.lawyer.fragments.ContactFragment;
 import com.ve.lawyer.fragments.NotificationFragment;
 import com.ve.lawyer.fragments.QuestionFragment;
@@ -36,9 +37,9 @@ public class DashboardActivity extends AppCompatActivity {
     private ImageView img_dashboard, img_category, img_password, img_help, img_term, img_logout;
     private TextView dashboard, category, change_pass, help, term, logout;
 
-    private LinearLayout ll_question, ll_notification, ll_contact;
-    private TextView tv_question, tv_notification, tv_contact;
-    private ImageView img_question, img_notification, img_contact;
+    private LinearLayout ll_question, ll_notification, ll_contact,ll_chat;
+    private TextView tv_question, tv_notification, tv_contact,tv_chat;
+    private ImageView img_question, img_notification, img_contact,img_chat;
 
 
     @Override
@@ -239,15 +240,18 @@ public class DashboardActivity extends AppCompatActivity {
         ll_question = findViewById(R.id.ll_question);
         ll_notification = findViewById(R.id.ll_notification);
         ll_contact = findViewById(R.id.ll_contact);
+        ll_chat = findViewById(R.id.ll_chat);
 
 
         tv_question = findViewById(R.id.tv_question);
         tv_notification = findViewById(R.id.tv_notification);
         tv_contact = findViewById(R.id.tv_contact);
+        tv_chat = findViewById(R.id.tv_chat);
 
         img_question = findViewById(R.id.img_question);
         img_notification = findViewById(R.id.img_notification);
         img_contact = findViewById(R.id.img_contact);
+        img_chat = findViewById(R.id.img_chat);
 
 
         ll_question.setOnClickListener((v) -> {
@@ -261,6 +265,10 @@ public class DashboardActivity extends AppCompatActivity {
 
             img_contact.setBackgroundResource(R.drawable.contact_off_icon);
             tv_contact.setTextColor(getResources().getColor(R.color.default_text_color));
+
+
+            img_chat.setBackgroundResource(R.drawable.ic_chat_off);
+            tv_chat.setTextColor(getResources().getColor(R.color.default_text_color));
 
             Utils.replaceFragment(this, R.id.container, new QuestionFragment());
             title.setText("Post Question");
@@ -279,6 +287,11 @@ public class DashboardActivity extends AppCompatActivity {
 
             img_contact.setBackgroundResource(R.drawable.contact_off_icon);
             tv_contact.setTextColor(getResources().getColor(R.color.default_text_color));
+
+
+            img_chat.setBackgroundResource(R.drawable.ic_chat_off);
+            tv_chat.setTextColor(getResources().getColor(R.color.default_text_color));
+
             Utils.replaceFragment(this, R.id.container, new NotificationFragment());
             title.setText("Notification");
         });
@@ -295,8 +308,36 @@ public class DashboardActivity extends AppCompatActivity {
             img_contact.setBackgroundResource(R.drawable.contact_on_icon);
             tv_contact.setTextColor(getResources().getColor(R.color.blue_fb));
             Utils.replaceFragment(this, R.id.container, new ContactFragment());
+
+
+            img_chat.setBackgroundResource(R.drawable.ic_chat_off);
+            tv_chat.setTextColor(getResources().getColor(R.color.default_text_color));
+
             title.setText("Contact");
         });
+
+        ll_chat.setOnClickListener((v) -> {
+
+            img_question.setBackgroundResource(R.drawable.q_off_icon);
+            tv_question.setTextColor(getResources().getColor(R.color.default_text_color));
+
+
+            img_notification.setBackgroundResource(R.drawable.notification_off_icon);
+            tv_notification.setTextColor(getResources().getColor(R.color.default_text_color));
+
+
+            img_contact.setBackgroundResource(R.drawable.contact_off_icon);
+            tv_contact.setTextColor(getResources().getColor(R.color.default_text_color));
+
+            img_chat.setBackgroundResource(R.drawable.ic_chat_on);
+            tv_chat.setTextColor(getResources().getColor(R.color.blue_fb));
+
+
+            Utils.replaceFragment(this, R.id.container, new ChatListFragment());
+            title.setText("Chat");
+        });
+
+
 
         Utils.replaceFragment(this, R.id.container, new QuestionFragment());
         title.setText("Post Question");

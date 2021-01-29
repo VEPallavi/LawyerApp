@@ -1,5 +1,6 @@
 package com.ve.lawyer.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +12,13 @@ import com.ve.lawyer.adapter.PostPagerAdapter;
 
 public class MyPostActivity extends AppCompatActivity {
 
+    private boolean openCat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_post);
+        openCat = getIntent().getBooleanExtra("openCat", false);
         clicks();
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("All Post"));
@@ -47,10 +51,22 @@ public class MyPostActivity extends AppCompatActivity {
     void clicks() {
 
         findViewById(R.id.back).setOnClickListener((v) -> {
-            finish();
+            onBackPressed();
 
 
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (openCat) {
+            startActivity(new Intent(this, CategoryActivity.class));
+            finish();
+        } else {
+            super.onBackPressed();
+        }
+
 
     }
 }
