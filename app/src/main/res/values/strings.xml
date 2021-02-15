@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LawRoom</string>
+    <string name="app_name">Law Room</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 
@@ -17,5 +17,11 @@
     <string name="tab_text_2">Tab 2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="which_best_describes_you">Which Best Describes You?</string>
+    <string name="client">Client</string>
+    <string name="best_for_end_user_non_proffesionals_and_customer">Best for end user, non proffesionals and customer</string>
+    <string name="lawyers">Lawyers</string>
+    <string name="professionals_attorney_and_advocate">Professionals, attorney and Advocate</string>
+    <string name="next">NEXT</string>
 
 </resources>
