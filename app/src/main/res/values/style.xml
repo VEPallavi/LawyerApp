@@ -1,0 +1,153 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="Base.MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppThemeFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="DefaultEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorLabel</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+
+    <style name="NumberEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorLabel</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="background">@null</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="EmailEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="background">@null</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="PasswordEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorLabel</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="WhiteBold16SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="WhiteRegular14SpStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="BlackBold16SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="BlackBold14SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="BlackRegular14SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="BlackRegular16SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="GrayRegular14SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorLabel</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="GrayRegular12SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorLabel</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="BlueBold16SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="BlueRegular16SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="BlueRegular14SpTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="WhiteRegular14SpBtnStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+</resources>

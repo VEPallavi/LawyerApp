@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Law Room</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="google_maps_key">AIzaSyCMnwZLrPE6JdcR9cwUImZuQpghutLyuW8</string>
 
 
     <array name="data">
@@ -23,5 +27,45 @@
     <string name="lawyers">Lawyers</string>
     <string name="professionals_attorney_and_advocate">Professionals, attorney and Advocate</string>
     <string name="next">NEXT</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="legal_basic_question">Legal Basic Question</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="please_enter_your_details">Please enter your details.</string>
+    <string name="first_name">First name</string>
+    <string name="type_of_law_practice">Type of Law Practice</string>
+    <string name="bar_number">Bar Number</string>
+    <string name="law_firm">Law Firm</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="term_and_condition">Term and Condition.</string>
+    <string name="please_enter_your_email_id_we_have_sent_your_password_in_email_id">Please enter your email Id, we have sent your password in email Id.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="categories">Categories</string>
+    <string name="post">Post</string>
+    <string name="post_question">Post Question</string>
+    <string name="change_password">Change Password</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="logout">Logout</string>
+    <string name="question">Question</string>
+    <string name="notification">Notification</string>
+    <string name="contact">Contact</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="chat">Chat</string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="rating_comment">My Rating &amp; Comment</string>
+    <string name="profile">Profile</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="save">Save</string>
+    <string name="issue">Issue</string>
+    <string name="write_here">Write here...</string>
+    <string name="submit">Submit</string>
+    <string name="see_all">See All</string>
+    <string name="hint_question">Question?</string>
+    <string name="lawyer_response">Lawyer Response</string>
 
 </resources>

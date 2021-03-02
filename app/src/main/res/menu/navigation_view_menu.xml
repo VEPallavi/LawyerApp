@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@mipmap/home_icon"
+            android:title="@string/dashboard"
+            android:checked="false"/>
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@mipmap/chat_icon"
+            android:title="@string/chat" />
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:icon="@mipmap/invite_icon"
+            android:title="@string/invite_friend" />
+        <item
+            android:id="@+id/nav_rating_comment"
+            android:icon="@mipmap/rating_icon"
+            android:title="@string/rating_comment" />
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@mipmap/lock_off_icon"
+            android:title="@string/change_password" />
+        <item
+            android:id="@+id/nav_help_and_support"
+            android:icon="@mipmap/support_icon"
+            android:title="@string/help_and_support" />
+        <item
+            android:id="@+id/nav_term_and_condition"
+            android:icon="@mipmap/term_icon"
+            android:title="@string/term_and_condition" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/logout_icon"
+            android:title="@string/logout" />
+    </group>
+</menu>

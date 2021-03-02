@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.ve.lawyer.R
+import com.ve.lawyer.ui.userflow.UserHomeActivity
 import com.ve.lawyer.utils.SlideAnimationUtil
 
 class SplashActivity : AppCompatActivity() {
@@ -19,8 +20,8 @@ class SplashActivity : AppCompatActivity() {
 //                startActivity(Intent(this@SplashActivity, HomeActivity::class.java))
 //            } else {
 //                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-//            }
-            startActivity(Intent(this@SplashActivity, UserTypeSelectionActivity::class.java))
+//            }UserTypeSelectionActivity
+            startActivity(Intent(this@SplashActivity, UserHomeActivity::class.java))
             finish()
             SlideAnimationUtil.slideNextAnimation(this@SplashActivity)
         },DELAY_TIME)
