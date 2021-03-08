@@ -35,6 +35,8 @@
         <activity android:name=".ui.lawyerflow.LawyerLandingActivity" />
         <activity android:name=".ui.userflow.UserHomeActivity"
             android:theme="@style/Base.MyTheme"/>
+        <activity android:name=".ui.chat.ChatListActivity" />
+        <activity android:name=".ui.chat.ChatActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

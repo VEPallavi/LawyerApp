@@ -5,16 +5,162 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        style="@style/BlueRegular16SpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:text="Profile fragment coming soon..."
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_top"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_250"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/dp_20">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_180"
+            android:background="@drawable/bg_solid_white_top_corner_rounded"            app:srcCompat="@mipmap/profile_bg_place_holder"
+            android:scaleType="fitXY"
+            android:src="@mipmap/image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profileImage"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:src="@mipmap/image_one"
+            android:layout_marginBottom="@dimen/dp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/camera_icon"
+            android:layout_marginLeft="@dimen/dp_80"
+            android:layout_marginStart="@dimen/dp_80"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyt_top">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/user_on_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nameTitle"
+            style="@style/GrayRegular12SpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_marginLeft="@dimen/dp_15"
+            app:layout_constraintLeft_toRightOf="@+id/iv_userName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_userName"
+            style="@style/BlackRegular14SpTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="User name"
+            android:layout_marginLeft="@dimen/dp_15"
+            app:layout_constraintLeft_toRightOf="@+id/iv_userName"
+            app:layout_constraintRight_toLeftOf="@+id/iv_editUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nameTitle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_editUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/edit_icon"
+            android:padding="@dimen/dp_7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/colorLightGray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userName"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_userEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyt_userName">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/email_on_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_emailTitle"
+            style="@style/GrayRegular12SpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:layout_marginLeft="@dimen/dp_15"
+            app:layout_constraintLeft_toRightOf="@+id/iv_userEmail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_userEmail"
+            style="@style/BlackRegular14SpTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="test@gmail.com"
+            android:layout_marginLeft="@dimen/dp_15"
+            app:layout_constraintLeft_toRightOf="@+id/iv_userEmail"
+            app:layout_constraintRight_toLeftOf="@+id/iv_editUserEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emailTitle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_editUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/edit_icon"
+            android:padding="@dimen/dp_7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/colorLightGray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userEmail"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

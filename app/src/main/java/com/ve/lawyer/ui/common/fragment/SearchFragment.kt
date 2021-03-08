@@ -36,6 +36,7 @@ class SearchFragment: Fragment(), View.OnClickListener {
         (activity as UserHomeActivity).setToolbarVisibility(false)
         (activity as UserHomeActivity).setToolbarMenuIconVisibility(false)
         (activity as UserHomeActivity).setToolbarBackIconVisibility(true)
+        (activity as UserHomeActivity).setBottomNavigationBarVisibility(true)
     }
 
     private fun setupClickListener() {

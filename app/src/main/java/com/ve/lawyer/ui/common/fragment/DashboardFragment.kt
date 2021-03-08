@@ -42,6 +42,7 @@ class DashboardFragment: Fragment(), View.OnClickListener, ListItemClickListener
         (activity as UserHomeActivity).setToolbarVisibility(true)
         (activity as UserHomeActivity).setToolbarMenuIconVisibility(true)
         (activity as UserHomeActivity).setToolbarBackIconVisibility(false)
+        (activity as UserHomeActivity).setBottomNavigationBarVisibility(true)
     }
 
     private fun setupDashboardList()

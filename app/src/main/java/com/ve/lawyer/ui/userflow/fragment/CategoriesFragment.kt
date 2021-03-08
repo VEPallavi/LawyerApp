@@ -44,6 +44,7 @@ class CategoriesFragment: Fragment(), View.OnClickListener, ListItemClickListene
         (activity as UserHomeActivity).setToolbarVisibility(true)
         (activity as UserHomeActivity).setToolbarMenuIconVisibility(false)
         (activity as UserHomeActivity).setToolbarBackIconVisibility(true)
+        (activity as UserHomeActivity).setBottomNavigationBarVisibility(true)
     }
 
     private fun setupCategoryList()

@@ -56,6 +56,7 @@
     <string name="search">Search</string>
     <string name="chat">Chat</string>
     <string name="invite_friend">Invite Friend</string>
+    <string name="contact_list">Contact List</string>
     <string name="rating_comment">My Rating &amp; Comment</string>
     <string name="profile">Profile</string>
     <string name="old_password">Old Password</string>
@@ -67,5 +68,7 @@
     <string name="see_all">See All</string>
     <string name="hint_question">Question?</string>
     <string name="lawyer_response">Lawyer Response</string>
+    <string name="dummy_text">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text."</string>
+    <string name="name">Name</string>
 
 </resources>

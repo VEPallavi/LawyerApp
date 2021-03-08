@@ -43,6 +43,7 @@ class PostQuestionFragment: Fragment(), View.OnClickListener {
         (activity as UserHomeActivity).setToolbarVisibility(true)
         (activity as UserHomeActivity).setToolbarMenuIconVisibility(true)
         (activity as UserHomeActivity).setToolbarBackIconVisibility(false)
+        (activity as UserHomeActivity).setBottomNavigationBarVisibility(false)
     }
 
     private fun setupCategoryList()

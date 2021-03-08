@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_senderUserImage"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/image_one"
+        app:civ_border_width="@dimen/dp_1"
+        app:civ_border_color="@color/colorBlue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_12"
+        app:layout_constraintLeft_toRightOf="@+id/iv_senderUserImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_senderUserImage">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_receiverUserName"
+            style="@style/GrayRegular12SpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_msgDateTime"
+            style="@style/GrayRegular12SpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02:00 PM"
+            android:paddingLeft="@dimen/dp_5"
+            app:layout_constraintLeft_toRightOf="@+id/tv_receiverUserName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_receiverMsg"
+            style="@style/WhiteRegular14SpStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:padding="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_3"
+            android:background="@drawable/bg_receive_message"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_receiverUserName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

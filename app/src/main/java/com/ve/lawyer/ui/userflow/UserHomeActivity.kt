@@ -1,6 +1,7 @@
 package com.ve.lawyer.ui.userflow
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -14,11 +15,10 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.ve.lawyer.R
+import com.ve.lawyer.ui.chat.ChatListActivity
 import com.ve.lawyer.ui.common.fragment.*
-import com.ve.lawyer.ui.userflow.fragment.CategoriesFragment
-import com.ve.lawyer.ui.userflow.fragment.InviteFriendsFragment
-import com.ve.lawyer.ui.userflow.fragment.PostQuestionFragment
-import com.ve.lawyer.ui.userflow.fragment.UserPostsFragment
+import com.ve.lawyer.ui.userflow.fragment.*
+import com.ve.lawyer.utils.SlideAnimationUtil
 import kotlinx.android.synthetic.main.toolbar_main.*
 
 class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
@@ -78,7 +78,9 @@ class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSele
                 setDisplayFragment(1)
             }
             R.id.nav_chat -> {
-                setDisplayFragment(2)
+                val intent = Intent(this@UserHomeActivity, ChatListActivity::class.java)
+                startActivity(intent)
+                SlideAnimationUtil.slideNextAnimation(this@UserHomeActivity)
             }
             R.id.nav_invite_friends -> {
                 setDisplayFragment(3)
@@ -136,12 +138,12 @@ class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSele
                 replaceFragment(mFragment, fragmentName)
             }
             2 -> {
-                mFragment = ChatFragment()
-                fragmentName = "ChatFragment"
+                mFragment = InviteFriendFragment()
+                fragmentName = "InviteFriendFragment"
                 replaceFragment(mFragment, fragmentName)
             }
             3 -> {
-                mFragment = InviteFriendsFragment()
+                mFragment = ContactListFragment()
                 fragmentName = "InviteFriendsFragment"
                 replaceFragment(mFragment, fragmentName)
             }
@@ -238,9 +240,7 @@ class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSele
             supportFragmentManager.popBackStackImmediate()
         }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is NotificationFragment) {
             supportFragmentManager.popBackStackImmediate()
-        }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is InviteFriendsFragment) {
-            supportFragmentManager.popBackStackImmediate()
-        }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is ChatFragment) {
+        }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is ContactListFragment) {
             supportFragmentManager.popBackStackImmediate()
         }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is ProfileFragment) {
             supportFragmentManager.popBackStackImmediate()
@@ -251,6 +251,10 @@ class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSele
         }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is RatingAndCommentFragment) {
             supportFragmentManager.popBackStackImmediate()
         }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is PostQuestionFragment) {
+            supportFragmentManager.popBackStackImmediate()
+        }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is PostDetailFragment) {
+            supportFragmentManager.popBackStackImmediate()
+        }else if (supportFragmentManager.findFragmentById(R.id.fragment_container) is InviteFriendFragment) {
             supportFragmentManager.popBackStackImmediate()
         } else {
             finish()
@@ -294,6 +298,14 @@ class UserHomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSele
             iv_toolbarBack.visibility = View.VISIBLE
         } else {
             iv_toolbarBack.visibility = View.GONE
+        }
+    }
+
+    fun setBottomNavigationBarVisibility(isVisible: Boolean) {
+        if (isVisible) {
+            bottomNavView?.visibility = View.VISIBLE
+        } else {
+            bottomNavView?.visibility = View.GONE
         }
     }
 
